@@ -1,7 +1,7 @@
-FROM python:3.8.10
+FROM python:3.9-alpine
 WORKDIR /app
 RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt 
 COPY . .
-CMD [ "python3","main.py" ]
+CMD [ "python3","./entry.py" ]

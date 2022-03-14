@@ -1,34 +1,28 @@
-from covid import Covid
-
-covid21 = Covid(source='worldometers')
+import tasker
 
 
-def get_country_name():
-    countries_list = covid21.list_countries()
-    for item in countries_list:
-        print(item)
-    country_name = input('Enter the country name: ')
-    if country_name != "exit":
-        while not (country_name in countries_list):
-            country_name = input("Enter the country name: ")
-        return country_name
-    else:
-        exit(1)
+class Main:
+    def __init__(self, path):
+        with open(path) as f:
+            self.text = f.read()
+        self.text_reader = tasker.Tasker(self.text)
 
+    def begin(self):
+        try:
+            k, n = map(
+                int,
+                input(
+                    "k and n: "
+                ).split()
+            )
+        except TypeError:
+            k, n = 10, 4
 
-def print_statistics_by_country(country):
-    print('Covid statistics in the country: ', country['country'])
-    print('Confirmed: ', country['confirmed'])
-    print('Deaths: ', country['deaths'])
-    print('Recovered: ', country['recovered'], )
-    print('Active: ', country['active'])
+        print("\tYour text:\n", self.text, "\n")
 
-
-def main():
-    name = get_country_name()
-    country_info_by_name = covid21.get_status_by_country_name(name)
-    print_statistics_by_country(country_info_by_name)
-
-
-if __name__ == '__main__':
-    main()
+        self.text_reader.get_occurrences_of_words(k)
+        print("\n\tAverage count of words in sentences: ",
+              self.text_reader.get_average_count_of_words())
+        print("\tMedian count of words in sentences: ",
+              self.text_reader.get_median_count_of_words(), "\n")
+        self.text_reader.get_ngrams(k, n)
