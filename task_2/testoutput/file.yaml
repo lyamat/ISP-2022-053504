@@ -1,0 +1,118 @@
+'1':
+  globals:
+    __builtins__: module
+  source:
+  - 1
+  - 0
+  - 0
+  - 1
+  - 2
+  - 67
+  - 7c00640113005300
+  - - null
+    - 2
+  - []
+  - - a
+  - /home/ilya/lab/test_unittest.py
+  - function1
+  - 10
+  - '0001'
+  type: function
+'2':
+  '3':
+    '4':
+      attributes:
+        __init__:
+          globals:
+            __builtins__: module
+          source:
+          - 5
+          - 0
+          - 0
+          - 5
+          - 2
+          - 67
+          - 7c017c005f007c027c005f017c037c005f027c047c005f0364005300
+          - - null
+          - - student_id
+            - name
+            - surname
+            - group
+          - - self
+            - student_id
+            - name
+            - surname
+            - group
+          - /home/ilya/lab/universal_parser/student.py
+          - __init__
+          - 9
+          - '0001060106010601'
+          type: function
+        const: 34
+        hello:
+          globals:
+            __builtins__: module
+          source:
+          - 1
+          - 0
+          - 0
+          - 1
+          - 1
+          - 67
+          - '64015300'
+          - - null
+            - hello from mytest
+          - []
+          - - self
+          - /home/ilya/lab/universal_parser/student.py
+          - hello
+          - 4
+          - '0001'
+          type: function
+        pp:
+          globals:
+            __builtins__: module
+          source:
+          - 1
+          - 0
+          - 0
+          - 1
+          - 2
+          - 67
+          - 7c006a007c006a0167025300
+          - - null
+          - - student_id
+            - surname
+          - - self
+          - /home/ilya/lab/universal_parser/student.py
+          - pp
+          - 15
+          - '0001'
+          type: function
+      name: Student
+      type: class
+'5':
+  attributes:
+    const: 34
+    hello:
+      globals:
+        __builtins__: module
+      source:
+      - 1
+      - 0
+      - 0
+      - 1
+      - 1
+      - 67
+      - '64015300'
+      - - null
+        - hello from mytest
+      - []
+      - - self
+      - /home/ilya/lab/universal_parser/student.py
+      - hello
+      - 4
+      - '0001'
+      type: function
+  name: MyTest
+  type: class_instance
